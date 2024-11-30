@@ -1,4 +1,4 @@
-class user :
+class User :
     def __init__(self,id,password,name,age,gender,birth):
         self.id = id
         self.password = password
@@ -15,10 +15,22 @@ def user_input():
     name = input("이름을 입력하세요: ")
     age = input("나이를 입력하세요: ")
     gender = input("성별을 입력하세요: ")
-    brith = input("생일을 입력하세요: ")
+    birth = input("생일을 입력하세요: ")
+    return User(id, password, name, age, gender,birth)
 
-user = [user{'abc','abc'}]
-# users = [{'id':'abc',password:'abc'}]
+def save_users_to_file(users, filename="users.json"):
+    with open(filename, "w") as file:
+        json.dump([user.to_dict() for user in users], file, indent=4)
+    print(f"{filename}에 유저 데이터가 저장되었습니다.")
+
+
+def save_users_to_file(users, filename="users.json"):
+    with open(filename, "w") as file:
+        json.dump([user.to_dict() for user in users], file, indent=4)
+    print(f"{filename}에 유저 데이터가 저장되었습니다.")
+
+user_input()
+save_users_to_file()
 
 
 while True:
