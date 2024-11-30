@@ -1,11 +1,17 @@
 class user :
-    def _init_(self,id,password):
+    def __init__(self,id,password,name,age,gender,birth):
         self.id = id
         self.password = password
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.birth = birth
 
-    def _repr_(self):
-        return f'user({self.id},{self.password})'
-
+    def __repr__(self):
+        return f'user({self.id},{self.password},{self.name},{self.age},{self.gender},{self.birth})'
+def user_input():
+    id = input("아이디를 입력하세요: ")
+    
 user = [user{'abc','abc'}]
 # users = [{'id':'abc',password:'abc'}]
 
