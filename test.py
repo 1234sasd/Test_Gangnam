@@ -11,11 +11,11 @@ class user :
         return f'user({self.id},{self.password},{self.name},{self.age},{self.gender},{self.birth})'
 def user_input():
     id = input("아이디를 입력하세요: ")
-    password = input("비밀번호를 입력하세요")
-    name = input("이름을 입력하세요")
-    age = input("나이를 입력하세요")
-    gender = input("성별을 입력하세요")
-    brith = input("생일을 입력하세요")
+    password = input("비밀번호를 입력하세요: ")
+    name = input("이름을 입력하세요: ")
+    age = input("나이를 입력하세요: ")
+    gender = input("성별을 입력하세요: ")
+    brith = input("생일을 입력하세요: ")
 
 user = [user{'abc','abc'}]
 # users = [{'id':'abc',password:'abc'}]
